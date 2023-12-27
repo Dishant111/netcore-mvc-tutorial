@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Optimus.Data;
-using Optimus.Entities;
+﻿using Microsoft.AspNetCore.Mvc;
+using Optimus.DataAccessLayer.Data;
+using Optimus.Models.Entities;
 
 namespace Optimus.Controllers
 {

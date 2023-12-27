@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Optimus.Entities
+namespace Optimus.Models.Entities
 {
     public class Category : FullAuditEntity
     {

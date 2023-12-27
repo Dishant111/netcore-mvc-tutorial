@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Optimus.Data;
+using Optimus.DataAccessLayer.Data;
 using System.Runtime.CompilerServices;
 
 namespace Optimus.Configurations
