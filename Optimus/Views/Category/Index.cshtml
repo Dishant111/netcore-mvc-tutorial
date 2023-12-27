@@ -1,0 +1,49 @@
+﻿@using Optimus.Entities
+@model IEnumerable<Category>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>List of categories</h1>
+
+<div class="container p-4">
+    <div class="row p-3">
+        <div class="col-6">Categories</div>
+        <div class="col-6">
+            <a class="btn btn-primary" asp-action="Create" asp-controller="Category"> <i class="bi bi-plus-circle"></i>&nbsp; Create new Category</a>
+         </div>
+    </div>
+</div>
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+    <th class="text-white-50">
+            category name
+        </th >
+    <th class="text-white-50">
+            Display order
+        </th>
+    <th class="text-white-50">
+        Index
+    </th>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="text-white">
+                    @item.Name
+                </td>
+                <td class="text-white">
+                    @item.DisplayOrder
+                </td>
+                <td class="text-white" role="group">
+                    <a asp-action="Edit" asp-controller="Category" asp-route-id="@item.Id"> <i class="bi bi-pencil-square"></i> </a>
+
+                    <a asp-action="Delete" asp-controller="Category" asp-route-id="@item.Id"> <i class="bi bi-trash"></i> </a>
+                </td>
+            </tr>
+        }
+        
+    </tbody>
+</table>
+
